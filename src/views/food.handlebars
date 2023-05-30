@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>{{title}}</title>
-</head>
-
-<body>
-
-    {{{body}}}
-
-</body>
-
-</html>
+<div>
+    <a href="http://localhost:{{PORT}}/">Volver a Puerto {{PORT}}</a>
+    {{#if cond}}
+    <h1>Aqui tenemos la lista de comidas</h1>
+    <ul>
+        {{#each food}}
+        <li>
+            <p>{{this.name}}:{{this.price}}</p>
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <h2>Aun no tenemos el menu preparado</h2>
+    {{/if}}
+</div>
